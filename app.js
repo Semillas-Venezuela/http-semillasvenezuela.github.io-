@@ -14,10 +14,10 @@ let countDown = new Date('Nov 1, 2018 00:00:00').getTime(),
         document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
         document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
       
-      //do something later when date is reached
+      //Hacer Algo cuando se cumpla la fecha
       //if (distance < 0) {
       //  clearInterval(x);
-      //  'IT'S MY BIRTHDAY!;
+      //    Lanzamiento!;
       //}
 
     }, second)
