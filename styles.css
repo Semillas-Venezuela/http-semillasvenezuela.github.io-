@@ -30,6 +30,16 @@
     font-size: 4.5rem;
     color: #f05572;
   }
+  .redes{
+    margin-top: 30px;
+    display: flex; 
+    width: 50%;
+    margin:0 auto; 
+    justify-content: space-between; 
+    font-size: 3em; 
+    text-decoration: none;
+    color:inherit;
+  }
   .container a{
     text-decoration: none;
     color: #333;
@@ -47,3 +57,11 @@
   .container a .fa-envelope:hover{
     color: #f05572;
   }
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+    
+    }
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+
+    }
