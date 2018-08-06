@@ -11,6 +11,9 @@
   .container {
     color: #333;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    
   }
   
   h1 {
@@ -59,7 +62,34 @@
   }
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) {
-    
+    *{
+        height: auto;
+    }
+    .container{
+        margin: 50px;
+    }
+    li span {
+        display: block;
+        font-size: 2.5rem;
+        color: #f05572;
+      }
+      .redes{
+        margin-top: 30px;
+        display: flex; 
+        width: 50%;
+        margin:0 auto; 
+        justify-content: space-between; 
+        font-size: 3em; 
+        text-decoration: none;
+        color:inherit;
+      }
+      h2{
+          font-size: 1em;
+      }
+      h1{
+          margin-top: 20px;
+          font-size: 1.5em;
+      }
     }
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
