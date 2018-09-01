@@ -2,14 +2,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    --color-amarillo: #f2d576;
+    --color-negro: #252627;
+    --color-verde: #1fb9af;
+    --color-naranja: #e87554;
+    --color-blanco: #fff9fb; 
   }
   
   body {
-    background-color: #1fb9af;
+    background-color: var(--color-amarillo);
   }
   
   .container {
-    color: #333;
+    color: var(--color-negro);
     text-align: center;
     height: 100vh;
     display: flex;
@@ -18,7 +23,9 @@
     justify-content: center;
     padding: 20%;
   }
-  
+  img.logo{
+    max-height: 32vh;
+  }
   h1 {
     font-weight: normal;
     font-size: 4.5em;
@@ -40,7 +47,7 @@
   li span {
     display: block;
     font-size: 4.5rem;
-    color: #f05572;
+    color: var(--color-blanco);
   }
   .redes{
     margin-top: 30px;
@@ -54,23 +61,23 @@
   }
   .container a{
     text-decoration: none;
-    color: #333;
+    color: var(--color-negro);
     transition: all .35s ease-in-out;
   }
   .container a .fa-facebook:hover{
-    color: #f05572;
+    color: var(--color-blanco);
   }
   .container a .fa-twitter:hover{
-    color: #f05572;
+    color: var(--color-blanco);
   }
   .container a .fa-instagram:hover{
-    color: #f05572;
+    color: var(--color-blanco);
   }
   .container a .fa-envelope:hover{
-    color: #f05572;
+    color: var(--color-blanco);
   }
 /* Smartphones (landscape) ----------- */
-@media only screen and (max-width : 321px) {
+@media only screen and (min-width : 321px) {
     *{
         height: auto;
     }
@@ -78,33 +85,38 @@
         display: flex;
         justify-content: center;
     }
+    ul{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+    }
     li {
       font-size: 1rem;
       display: block;
       width: 100%;
+
     }
     li span {
         display: block;
         font-size: 2rem;
-        color: #f05572;
+        color: var(--color-blanco);
+       
       }
       .redes{
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 3vh;
         font-size: 3em; 
         text-decoration: none;
         color:inherit;
       }
-      h2{
-          font-size: 0.8em;
-          width: 100%;
-          text-align: justify;
-      }
+      h2{display: none;}
       h1{
           margin-top: 20px;
           font-size: 1.8em;
       }
     }
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-
+@media only screen and (min-width : 320px) {
+  h2{display: none;}
     }
