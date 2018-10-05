@@ -1,23 +1,15 @@
-const second = 1000,
-      minute = second * 60,
-      hour = minute * 60,
-      day = hour * 24;
+const second = 1000;
+const minute = second * 60;
+const hour = minute * 60;
+const day = hour * 24;
 
-var countDown = new Date('Nov 1, 2018 00:00:00').getTime(),
-    x = setInterval(function() {
+const countDown = new Date('Nov 1, 2018 00:00:00').getTime();
+const x = setInterval(() => {
+  let now = new Date().getTime();
+  let distance = countDown - now;
 
-      let now = new Date().getTime(),
-          distance = countDown - now;
-
-      document.getElementById('days').innerText = Math.floor(distance / (day)),
-        document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
-        document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-        document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-      
-      //Hacer Algo cuando se cumpla la fecha
-      //if (distance < 0) {
-      //  clearInterval(x);
-      //    Lanzamiento!;
-      //}
-
-    }, second)
+  document.getElementById('days').innerText = Math.floor(distance / (day)),
+  document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+  document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+  document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+}, second);
