@@ -5,8 +5,8 @@ const day = hour * 24;
 
 const countDown = new Date('Nov 1, 2018 00:00:00').getTime();
 const x = setInterval(function () {
-  let now = new Date().getTime();
-  let distance = countDown - now;
+  var now = new Date().getTime();
+  var distance = countDown - now;
 
   document.getElementById('days').innerText = Math.floor(distance / (day)),
   document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
