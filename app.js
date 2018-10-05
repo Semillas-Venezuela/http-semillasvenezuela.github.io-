@@ -4,7 +4,7 @@ const hour = minute * 60;
 const day = hour * 24;
 
 const countDown = new Date('Nov 1, 2018 00:00:00').getTime();
-const x = setInterval(() => {
+const x = setInterval(function () {
   let now = new Date().getTime();
   let distance = countDown - now;
 
